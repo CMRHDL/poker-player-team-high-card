@@ -11,7 +11,7 @@ const {
   isSuited,
 } = utils;
 
-const early = 100;
+const early = 1000;
 const mid = 75;
 const late = 30;
 const end = 10;
