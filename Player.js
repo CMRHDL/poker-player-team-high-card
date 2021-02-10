@@ -76,6 +76,11 @@ class Player {
       if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J", "10"])) {
         return bet(10000);
       }
+
+      if (hasAce(firstCard, secondCard)) {
+        return bet(10000);
+      }
+
       return bet(10000);
     }
 
