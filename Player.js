@@ -12,8 +12,8 @@ const {
 } = utils;
 
 const early = 1000;
-const mid = 75;
-const late = 30;
+const mid = 50;
+const late = 20;
 const end = 10;
 
 class Player {
@@ -86,7 +86,7 @@ class Player {
     }
 
     if (player.stack / gameState.small_blind < end) {
-      // nothing hand
+      // nothing hand - need to go all-in anyways because stack-size it too small to fold
       return bet(10000);
     }
 

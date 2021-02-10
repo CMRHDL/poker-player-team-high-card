@@ -22,9 +22,6 @@ const cards = [
   "2",
 ]
 
-const toRanks = (card) => card.rank;
-const containsCard = rank => (card) => card.rank === rank;
-
 const utils = {
   highCards,
   hasPocketPair: (firstCard, secondCard) => {
