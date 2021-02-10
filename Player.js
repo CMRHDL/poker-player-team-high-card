@@ -11,9 +11,9 @@ const {
   isSuited,
 } = utils;
 
-const early = 100;
-const mid = 50;
-const late = 20;
+const early = 200;
+const mid = 100;
+const late = 50;
 const end = 10;
 
 class Player {
