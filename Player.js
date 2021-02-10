@@ -1,10 +1,9 @@
-
 const highCards = [
   "A",
   "K",
   "Q",
-  "J",
-  "10",
+  // "J",
+  // "10",
 ];
 
 class Player {
@@ -16,7 +15,7 @@ class Player {
 
     const [firstCard, secondCard] = gameState[in_action].hole_cards;
 
-    const strongStartingHand = highCards.includes(firstCard.rank) &&highCards.includes(secondCard.rank);
+    const strongStartingHand = highCards.includes(firstCard.rank) && highCards.includes(secondCard.rank);
 
     if (strongStartingHand) {
       bet(10000);
