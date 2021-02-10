@@ -54,6 +54,10 @@ class Player {
       ) {
         return bet(10000);
       }
+
+      if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J"])) {
+        return bet(10000);
+      }
     }
 
     if (player.stack / gameState.small_blind < late) {
@@ -65,7 +69,7 @@ class Player {
         return bet(10000);
       }
 
-      if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J", "T"])) {
+      if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J", "10"])) {
         return bet(10000);
       }
       return bet(10000);
