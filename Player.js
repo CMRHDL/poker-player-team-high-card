@@ -1,21 +1,15 @@
-const highCards = [
-  "A",
-  "K",
-  // "Q",
-  // "J",
-  // "10",
-];
+import {highCards} from "./utils"
 
 class Player {
   static get VERSION() {
-    return '0.1';
+    return "0.1";
   }
 
   static betRequest(gameState, bet) {
-
     const [firstCard, secondCard] = gameState[in_action].hole_cards;
 
-    const strongStartingHand = highCards.includes(firstCard.rank) && highCards.includes(secondCard.rank);
+    const strongStartingHand =
+      highCards.includes(firstCard.rank) && highCards.includes(secondCard.rank);
 
     if (strongStartingHand) {
       return bet(10000);
@@ -24,8 +18,7 @@ class Player {
     return bet(0);
   }
 
-  static showdown(gameState) {
-  }
+  static showdown(gameState) {}
 }
 
 module.exports = Player;
