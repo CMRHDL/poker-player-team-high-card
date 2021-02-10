@@ -1,10 +1,28 @@
+
+const highCards = [
+  "A",
+  "K",
+  "Q",
+  "J",
+  "10",
+];
+
 class Player {
   static get VERSION() {
     return '0.1';
   }
 
   static betRequest(gameState, bet) {
-    bet(10000);
+
+    const [firstCard, secondCard] = gameState[in_action].hole_cards;
+
+    const strongStartingHand = highCards.includes(firstCard.rank) &&highCards.includes(secondCard.rank);
+
+    if (strongStartingHand) {
+      bet(10000);
+    }
+
+    bet(0);
   }
 
   static showdown(gameState) {
