@@ -19,3 +19,4 @@ export const hasAtLeastOneHighCard = (firstCard, secondCard) => {
 export const isSuited = (firstCard, secondCard) => {
   return firstCard.suit === secondCard.suit;
 }
+

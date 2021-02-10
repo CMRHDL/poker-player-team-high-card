@@ -6,7 +6,7 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
-    const [firstCard, secondCard] = gameState[in_action].hole_cards;
+    const [firstCard, secondCard] = gameState[gameState.in_action].hole_cards;
 
     const strongStartingHand =
       highCards.includes(firstCard.rank) && highCards.includes(secondCard.rank);
