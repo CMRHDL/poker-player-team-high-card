@@ -59,7 +59,10 @@ class Player {
         return bet(10000);
       }
 
-      if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J", "10"]) && isSuited(firstCard, secondCard)) {
+      if (
+        hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J", "10"]) &&
+        isSuited(firstCard, secondCard)
+      ) {
         return bet(10000);
       }
     }
@@ -80,8 +83,6 @@ class Player {
       if (hasAce(firstCard, secondCard)) {
         return bet(10000);
       }
-
-      return bet(10000);
     }
 
     if (player.stack / gameState.small_blind < end) {
