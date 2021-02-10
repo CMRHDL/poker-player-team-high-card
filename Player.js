@@ -1,4 +1,28 @@
-import { highCards } from "./utils";
+const highCards = [
+  "A",
+  "K",
+  // "Q",
+  // "J",
+  // "10",
+];
+
+const hasPocketPair = (firstCard, secondCard) => {
+  return firstCard.rank === secondCard.rank;
+};
+
+const hasAtLeastOneHighCard = (firstCard, secondCard) => {
+  return (
+    highCards.includes(firstCard.rank) || highCards.includes(secondCard.rank)
+  );
+};
+
+const isSuited = (firstCard, secondCard) => {
+  return firstCard.suit === secondCard.suit;
+}
+
+const hasHitPair = (firstCard, secondCard, community_cards) => {
+
+}
 
 class Player {
   static get VERSION() {
