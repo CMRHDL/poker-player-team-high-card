@@ -58,6 +58,10 @@ class Player {
       if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J"])) {
         return bet(10000);
       }
+
+      if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J", "10"]) && isSuited(firstCard, secondCard)) {
+        return bet(10000);
+      }
     }
 
     if (player.stack / gameState.small_blind < late) {
