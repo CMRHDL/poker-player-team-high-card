@@ -18,7 +18,7 @@ const end = 10;
 
 class Player {
   static get VERSION() {
-    return "0.1";
+    return "9001";
   }
 
   static betRequest(gameState, bet) {
