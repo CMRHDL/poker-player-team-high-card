@@ -30,8 +30,8 @@ const utils = {
   hasPocketPair: (firstCard, secondCard) => {
     return firstCard.rank === secondCard.rank;
   },
-  hasHighCards: (firstCard, secondCard) => {
-    return firstCard.rank === "A" || secondCard.rank === "A";
+  hasHighCards: (firstCard, secondCard, cards) => {
+    return cards.includes(firstCard.rank) && cards.includes(secondCard.rank);
   },
   hasAce: (firstCard, secondCard) => {
     return firstCard.rank === "A" || secondCard.rank === "A";

@@ -7,6 +7,7 @@ const {
   hasHitPair,
   hasPocketPair,
   highCards,
+  hasHighCards,
   isSuited,
 } = utils;
 
@@ -33,7 +34,10 @@ class Player {
 
     if (player.stack / gameState.small_blind < early) {
       // pretty good hand
-      if (hasPocketPair(firstCard, secondCard) && hasAtLeast(firstCard, secondCard, "10")) {
+      if (
+        hasPocketPair(firstCard, secondCard) &&
+        hasAtLeast(firstCard, secondCard, "10")
+      ) {
         return bet(10000);
       }
     }
@@ -44,14 +48,24 @@ class Player {
         return bet(10000);
       }
 
-      if (hasPocketPair(firstCard, secondCard) && hasAtLeast(firstCard, secondCard, "8")) {
+      if (
+        hasPocketPair(firstCard, secondCard) &&
+        hasAtLeast(firstCard, secondCard, "8")
+      ) {
         return bet(10000);
       }
     }
 
     if (player.stack / gameState.small_blind < late) {
       // okish hand
-      if (hasPocketPair(firstCard, secondCard) && hasAtLeast(firstCard, secondCard, "5")) {
+      if (
+        hasPocketPair(firstCard, secondCard) &&
+        hasAtLeast(firstCard, secondCard, "5")
+      ) {
+        return bet(10000);
+      }
+
+      if (hasHighCards(firstCard, secondCard, ["A", "K", "Q", "J", "T"])) {
         return bet(10000);
       }
       return bet(10000);
