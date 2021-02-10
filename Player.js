@@ -18,10 +18,10 @@ class Player {
     const strongStartingHand = highCards.includes(firstCard.rank) && highCards.includes(secondCard.rank);
 
     if (strongStartingHand) {
-      bet(10000);
+      return bet(10000);
     }
 
-    bet(0);
+    return bet(0);
   }
 
   static showdown(gameState) {
